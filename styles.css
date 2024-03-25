@@ -101,10 +101,6 @@ td {
     margin-bottom: 20px;
 }
 
-.info {
-    flex-grow: 1;
-}
-
 .meta {
     text-align: right;
 }
