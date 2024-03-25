@@ -1,18 +1,34 @@
+/* Resetting default margin and padding */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
 }
 
+.header {
+    background-color: #c6e2ff;
+    color: #000000; /* White text color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Flexbox container for centering content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff; /* Adding a light background color */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Styles for the main content */
 main {
     max-width: 800px;
-    margin: 20px auto;
     padding: 20px;
-    background-color: #f8f4f4;
+    background-color: #ffffff; /* White background color */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
 }
 
 section {
@@ -21,28 +37,42 @@ section {
 
 h2 {
     color: #333;
-    margin-bottom: 10px;
     margin-top: 10px;
-    padding-left: 50px;
-    
+    padding-left: 10px; /* Adjusting padding for headings */
+    border-left: 5px solid #007bff; /* Adding a left border for emphasis */
+    padding-bottom: 5px; /* Adding space at the bottom of headings */
+    align-self: flex-start;
+}
+
+h3 {
+    color: #333;
+    margin-top: 10px;
+    padding-left: 10px; /* Adjusting padding for headings */
+    padding-left: 5px;
+    padding-bottom: 5px; /* Adding space at the bottom of headings */
 }
 
 p {
     color: #666;
-    margin-bottom: 15px;
     margin-top: 10px;
+    line-height: 1.6; /* Increasing line height for readability */
+    padding-left: 20px;
 }
 
 a {
     color: #007bff;
     text-decoration: none;
+    font-weight: bold; /* Making links more prominent */
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    margin-bottom: 15px;
+    width:100%;
+    max-width:800px;
+    border:0px;
+    border-spacing:0px;
+    border-collapse:separate;
+    margin-right:auto;
+    margin-left:auto;
 }
 
 td {
@@ -63,13 +93,6 @@ td {
     margin-bottom: 20px;
 }
 
-.centered-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    margin-bottom: 15px;
-}
-
 /* Styles for Experience and Projects */
 .experience-item,
 .project-item {
@@ -86,7 +109,26 @@ td {
     text-align: right;
 }
 
+.info {
+    flex: 1;
+}
+
+.info p {
+    margin: 5px 0; /* Add margin for better spacing between lines */
+}
+
+.info p:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last paragraph */
+}
+
+/* Ensure location and duration appear on the same line without margin */
 .location,
 .duration {
     margin: 0;
+    align-self: flex-end;
+    text-align: right;
+}
+
+ul {
+    line-height: 2; /* Set line height to double the font size */
 }
