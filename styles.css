@@ -1,31 +1,57 @@
-/* Resetting default margin and padding */
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 .header {
     background-color: #c6e2ff;
-    color: #000000; /* White text color */
-    padding: 20px;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
-/* Flexbox container for centering content */
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 20px; /* Add space between items */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #000000; /* Black text color */
+    font-weight: bold; /* Make the font bold */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Change text color on hover */
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #ffffff; /* Adding a light background color */
-    padding-left: 50px;
-    padding-right: 50px;
 }
 
 /* Styles for the main content */
 main {
     max-width: 800px;
-    padding: 20px;
     background-color: #ffffff; /* White background color */
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
@@ -33,6 +59,7 @@ main {
 
 section {
     margin-bottom: 30px;
+    padding-top: 10px;
 }
 
 h2 {
@@ -48,8 +75,6 @@ h3 {
     color: #333;
     margin-top: 10px;
     padding-left: 10px; /* Adjusting padding for headings */
-    padding-left: 5px;
-    padding-bottom: 5px; /* Adding space at the bottom of headings */
 }
 
 p {
@@ -60,9 +85,23 @@ p {
 }
 
 a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold; /* Making links more prominent */
+    text-decoration: none; /* Remove underline from links */
+    color: #000000; /* Black text color */
+    font-weight: bold; /* Make the font bold */
+}
+
+a:hover {
+    color: #007bff; /* Change text color on hover */
+}
+
+.about-link {
+    font-weight: bold; /* Make the font bold */
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.about-link:hover {
+    text-decoration: underline; /* Underline links on hover */
 }
 
 table {
@@ -71,12 +110,9 @@ table {
     border:0px;
     border-spacing:0px;
     border-collapse:separate;
-    margin-right:auto;
-    margin-left:auto;
 }
 
 td {
-    padding: 10px;
     vertical-align: top;
 }
 
