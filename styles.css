@@ -2,33 +2,55 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Adding a light background color */
 }
 
+/* Fixed Header */
 .header {
     background-color: #c6e2ff;
     color: #000000;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the header is on top of other elements */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Add a shadow for better separation */
 }
 
-nav {
-    margin-bottom: 20px;
+/* Navigation bar container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between left and right nav */
+    align-items: center;
+    max-width: 1200px; /* Set a max width */
+    margin: 0 auto; /* Center the navbar */
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+/* Navigation items on the left */
+.nav-left,
+.nav-right {
+    display: flex;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-nav ul li {
-    display: inline-block; /* Display list items horizontally */
-    margin-right: 20px; /* Add space between items */
+/* Center items within the navigation bar */
+.navbar ul {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Center navigation items */
 }
 
-nav ul li:last-child {
-    margin-right: 0; /* Remove margin for the last item */
+.nav-left ul li,
+.nav-right ul li {
+    margin: 0 10px; /* Add space between items */
 }
 
 nav ul li a {
@@ -41,27 +63,54 @@ nav ul li a:hover {
     color: #007bff; /* Change text color on hover */
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #ffffff; /* Adding a light background color */
+nav ul li.brand a {
+    font-size: 1.5em; /* Larger font size for the brand */
 }
 
-/* Styles for the main content */
+/* Main content container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 120px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 main {
-    max-width: 800px;
     background-color: #ffffff; /* White background color */
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    padding: 20px;
 }
 
+/* Section styles */
 section {
     margin-bottom: 30px;
     padding-top: 10px;
 }
 
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    flex: 0 0 150px;
+    margin-right: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.profile-img {
+    border-radius: 50%;
+    max-width: 200px;
+    width: 100%;
+}
+
+/* Heading styles */
 h2 {
     color: #333;
     margin-top: 10px;
@@ -77,6 +126,7 @@ h3 {
     padding-left: 10px; /* Adjusting padding for headings */
 }
 
+/* Paragraph styles */
 p {
     color: #666;
     margin-top: 10px;
@@ -84,6 +134,7 @@ p {
     padding-left: 20px;
 }
 
+/* Link styles */
 a {
     text-decoration: none; /* Remove underline from links */
     color: #000000; /* Black text color */
@@ -94,6 +145,7 @@ a:hover {
     color: #007bff; /* Change text color on hover */
 }
 
+/* About link styles */
 .about-link {
     font-weight: bold; /* Make the font bold */
     color: #007bff; /* Blue link color */
@@ -104,24 +156,28 @@ a:hover {
     text-decoration: underline; /* Underline links on hover */
 }
 
+/* Table styles */
 table {
-    width:100%;
-    max-width:1000px;
-    border:0px;
-    border-spacing:0px;
-    border-collapse:separate;
+    width: 100%;
+    max-width: 1000px;
+    border: 0px;
+    border-spacing: 0px;
+    border-collapse: separate;
 }
 
+/* Table cell styles */
 td {
     vertical-align: top;
 }
 
+/* Profile image styles */
 .profile-img {
     border-radius: 50%;
     max-width: 150px;
     height: auto;
 }
 
+/* Name styles */
 .name {
     font-size: 24px;
     font-weight: bold;
@@ -129,7 +185,7 @@ td {
     margin-bottom: 20px;
 }
 
-/* Styles for Experience and Projects */
+/* Experience and project item styles */
 .experience-item,
 .project-item {
     display: flex;
@@ -137,14 +193,17 @@ td {
     margin-bottom: 20px;
 }
 
+/* Meta information styles */
 .meta {
     text-align: right;
 }
 
+/* Info styles */
 .info {
     flex: 1;
 }
 
+/* Info paragraph styles */
 .info p {
     margin: 5px 0; /* Add margin for better spacing between lines */
 }
@@ -153,7 +212,7 @@ td {
     margin-bottom: 0; /* Remove bottom margin from the last paragraph */
 }
 
-/* Ensure location and duration appear on the same line without margin */
+/* Location and duration styles */
 .location,
 .duration {
     margin: 0;
@@ -161,6 +220,9 @@ td {
     text-align: right;
 }
 
+/* List styles */
 ul {
     line-height: 2; /* Set line height to double the font size */
 }
+
+
